@@ -1,11 +1,11 @@
 $(document).ready(function() {
   console.log('hello world');
-
-getVideos();
-}); // close the doc reeady
+  getVideos();
+}); // close the doc ready
 
 
 //Event listeners - with Event delegation
+
 $('#submit-video').on('click', function(event) {
   createVideo();
 });
@@ -31,7 +31,7 @@ function createVideo() {
     genre: $('#new-genre').val(),
     description: $('#new-description').val()
   }
-  
+
   $.post('/videos/new', data, function(response) {
     appendNewVideo(response)
   })
